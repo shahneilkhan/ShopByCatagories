@@ -1,0 +1,111 @@
+<section class="shop-by-category">
+  <div class="page-width">
+    <h2 class="title">Shop by Category</h2>
+    <div class="category-slider-wrapper">
+      <div class="category-slider" id="autoScrollSlider">
+        {% for collection in collections limit:25 %}
+          <div class="category-item">
+            <a href="{{ collection.url }}">
+              <div class="category-image">
+                {% if collection.image %}
+                  <img src="{{ collection.image | img_url: 'medium' }}" alt="{{ collection.title }}">
+                {% else %}
+                  <img src="{{ 'placeholder.png' | asset_url }}" alt="No image">
+                {% endif %}
+              </div>
+              <p>{{ collection.title }}</p>
+            </a>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+.shop-by-category {
+  background: #fafafa;
+  padding: 30px 0;
+  border-radius: 16px;
+}
+
+.shop-by-category .title {
+  font-weight: 700;
+  font-size: 22px;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.category-slider-wrapper {
+  overflow: hidden;
+}
+
+.category-slider {
+  display: flex;
+  gap: 25px;
+  animation: scrollSlider 30s linear infinite;
+}
+
+.category-item {
+  flex: 0 0 auto;
+  text-align: center;
+  width: 100px;
+}
+
+.category-item a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.category-image {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+.category-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.category-item:hover .category-image {
+  transform: scale(1.05);
+}
+
+.category-item p {
+  font-size: 14px;
+  font-weight: 600;
+  color: #222;
+  margin: 0;
+}
+
+/* Sliding animation */
+@keyframes scrollSlider {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* Hover করলে থামবে */
+.category-slider:hover {
+  animation-play-state: paused;
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const slider = document.getElementById('autoScrollSlider');
+  // Loop effect জন্য items duplicate
+  const clone = slider.innerHTML;
+  slider.innerHTML += clone;
+});
+</script>
