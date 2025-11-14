@@ -28,7 +28,14 @@ Each block can have an optional icon/image, a title, and a link to the category 
 It’s fully responsive, mobile-friendly, and provides a clean hover zoom effect for better UX.  
 
 
-##Modern Footer layout Shopify
+## Modern Footer layout Shopify
+
+<a href="https://github.com/shahneilkhan/ShopByCatagories/blob/main/Screenshot_29.png" target="_blank" rel="noopener noreferrer">
+  <img src="https://raw.githubusercontent.com/shahneilkhan/ShopByCatagories/main/Screenshot_29.png"
+       alt="{{ collection.title }}"
+       style="max-width:100%; height:auto; display:block;">
+</a>
+
 
 ✔️ Colomn: Need Help, Help Info, Trending Collections, Policies, Newsletter
 
