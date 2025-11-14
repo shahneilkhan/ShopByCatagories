@@ -28,3 +28,16 @@ Each block can have an optional icon/image, a title, and a link to the category 
 It’s fully responsive, mobile-friendly, and provides a clean hover zoom effect for better UX.  
 
 
+##Modern Footer layout Shopify
+
+✔️ Colomn: Need Help, Help Info, Trending Collections, Policies, Newsletter
+
+✔️ Hover effect
+
+✔️ Icons (SVG / FontAwesome / Shopify Icons)
+
+✔️ Input email subscribe box
+
+✔️ Social icons (FB, Insta, Twitter, Pinterest, YouTube)
+
+✔️ Mobile responsive design
