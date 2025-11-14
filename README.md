@@ -15,7 +15,6 @@ This is a **custom Shopify section** for displaying a category slider with the f
 - Clean solid card design
 - Fully Shopify compatible, no Liquid errors
 
----
 
 ## Screenshot / Cover
 
@@ -24,36 +23,6 @@ This is a **custom Shopify section** for displaying a category slider with the f
 # Shopify Category Slider
 
 A **custom Shopify section** for displaying category icons in a responsive, interactive slider.  
-
----
-
-## Key Features
-
-- Editable heading  
-- Title editable per block  
-- Optional icon/image  
-- Autoplay 2.5 sec  
-- Right-to-left scroll (RTL)  
-- Hover zoom effect  
-- No arrows  
-- Icon size 60px  
-- Max 20 icons  
-- 10 icons visible on desktop, 3 icons on mobile/tablet  
-- Clean solid card design  
-- Fully Shopify compatible  
-
----
-
-## Screenshot / Cover
-
-![Category Slider Screenshot](./assets/category-slider-screenshot.png)
-
-> Place your screenshot in the `assets` folder of your repo.  
-> Replace `category-slider-screenshot.png` with your actual screenshot file name.
-
----
-
-## Usage / Description
 
 This section is designed for Shopify stores to showcase categories or collections in a visually appealing slider.  
 Each block can have an optional icon/image, a title, and a link to the category page.  
