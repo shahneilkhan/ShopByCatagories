@@ -36,15 +36,13 @@ It’s fully responsive, mobile-friendly, and provides a clean hover zoom effect
        style="max-width:100%; height:auto; display:block;">
 </a>
 
+custom-footer.liquid
 
 ✔️ Colomn: Need Help, Help Info, Trending Collections, Policies, Newsletter
-
 ✔️ Hover effect
-
 ✔️ Icons (SVG / FontAwesome / Shopify Icons)
-
 ✔️ Input email subscribe box
-
 ✔️ Social icons (FB, Insta, Twitter, Pinterest, YouTube)
-
 ✔️ Mobile responsive design
+
+Code Footer01
