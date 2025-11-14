@@ -1,3 +1,7 @@
+## Screenshot / Cover
+
+<img src="https://raw.githubusercontent.com/shahneilkhan/ShopByCatagories/main/Screenshot_28.png" alt="{{ collection.title }}">
+
 # Shopify Category Slider Section
 
 This is a **custom Shopify section** for displaying a category slider with the following features:
@@ -14,14 +18,6 @@ This is a **custom Shopify section** for displaying a category slider with the f
 - 10 icons visible on desktop, 3 icons on mobile/tablet
 - Clean solid card design
 - Fully Shopify compatible, no Liquid errors
-
-
-## Screenshot / Cover
-
-![Category Slider Screenshot](./assets/category-slider-screenshot.png) 
-
-<img src="https://raw.githubusercontent.com/shahneilkhan/ShopByCatagories/main/Screenshot_28.png" alt="{{ collection.title }}">
-
 
 # Shopify Category Slider
 
