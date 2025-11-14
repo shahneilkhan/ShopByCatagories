@@ -1,0 +1,137 @@
+{% schema %}
+{
+  "name": "Shop by Category Slider",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Shop by Category"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "category",
+      "name": "Category Item",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "icon",
+          "label": "Category Icon / Image"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Category Title",
+          "default": "Category Name"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Category Link"
+        }
+      ]
+    }
+  ],
+  "max_blocks": 20,
+  "presets": [
+    {
+      "name": "Shop by Category Slider",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}
+
+<div class="category-wrapper" style="padding:20px;">
+  <h2 style="text-align:center; color:#000;">{{ section.settings.heading }}</h2>
+
+  <div class="swiper category-swiper" style="padding:20px 0;">
+    <div class="swiper-wrapper">
+      {% for block in section.blocks %}
+        <div class="swiper-slide">
+          <a href="{{ block.settings.link }}" class="glass-card">
+            {% if block.settings.icon != blank %}
+              <img src="{{ block.settings.icon | img_url: '200x200' }}" class="category-icon" alt="{{ block.settings.title }}">
+            {% endif %}
+            <p class="category-title">{{ block.settings.title }}</p>
+          </a>
+        </div>
+      {% endfor %}
+    </div>
+
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+  </div>
+</div>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+<style>
+.glass-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: 18px;
+  border-radius: 16px;
+  background: #fff; /* solid background */
+  border: 1px solid #e0e0e0;
+  text-decoration: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.glass-card:hover {
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.category-icon {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.glass-card:hover .category-icon {
+  transform: scale(1.15);
+}
+
+.category-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #000;
+  margin-top: 4px;
+  text-align: center;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: #000 !important;
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  new Swiper('.category-swiper', {
+    slidesPerView: 5,
+    spaceBetween: 20,
+    loop: true,
+    rtl: true, /* Right-to-left scroll */
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    breakpoints: {
+      0: { slidesPerView: 4, spaceBetween: 10 },
+      768: { slidesPerView: 6, spaceBetween: 15 },
+      1024: { slidesPerView: 9, spaceBetween: 20 },
+    },
+  });
+});
+</script>
