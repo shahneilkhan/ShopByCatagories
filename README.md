@@ -18,7 +18,10 @@ This is a **custom Shopify section** for displaying a category slider with the f
 
 ## Screenshot / Cover
 
-![Category Slider Screenshot](./assets/category-slider-screenshot.png)
+![Category Slider Screenshot](./assets/category-slider-screenshot.png) 
+
+<img src="https://raw.githubusercontent.com/shahneilkhan/ShopByCatagories/main/Screenshot_28.png" alt="{{ collection.title }}">
+
 
 # Shopify Category Slider
 
