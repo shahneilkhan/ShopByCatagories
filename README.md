@@ -46,3 +46,47 @@ custom-footer.liquid
 ✔️ Mobile responsive design
 
 Code Footer01
+
+Sample Menu Structure
+
+Home
+
+No submenu
+
+Shop
+
+Electronics
+
+Gadgets
+
+Accessories
+
+Categories
+
+Smartphones
+
+Laptops
+
+Smartwatches
+
+About Us
+
+No submenu
+
+Blog
+
+Tech Updates
+
+Reviews
+
+Contact
+
+Customer Support
+
+Locations
+
+Offers
+
+Seasonal Offers
+
+Clearance Sale
