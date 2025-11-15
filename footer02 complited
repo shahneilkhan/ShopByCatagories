@@ -1,0 +1,205 @@
+<section class="custom-footer">
+  <div class="footer-container page-width">
+
+    <div class="footer-column">
+      <h3>Need help</h3>
+
+      <div class="footer-item">
+        <span class="footer-icon">📞</span>
+        <p>Got questions? Call us 24/7<br><strong>1908474783</strong></p>
+      </div>
+
+      <div class="footer-item">
+        <span class="footer-icon">🎧</span>
+        <p>Need help with your order?<br><a href="/pages/contact">Contact</a></p>
+      </div>
+
+      <div class="footer-item">
+        <span class="footer-icon">💬</span>
+        <p>Available 24/7 via chat<br><a href="/pages/contact">Chat With Us</a></p>
+      </div>
+    </div>
+
+    <div class="footer-column">
+      <h3>Help Info</h3>
+      <ul>
+        <li><a href="/pages/about-us">About Us</a></li>
+        <li><a href="/pages/customer-service">Customer Services</a></li>
+        <li><a href="/pages/contact">Contact Us</a></li>
+        <li><a href="/pages/faq">FAQ's</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-column">
+      <h3>Trending Collections</h3>
+      <ul>
+        <li><a href="/collections/great-deals">Great Deals</a></li>
+        <li><a href="/collections/flagship-phones">Flagship Phones</a></li>
+        <li><a href="/collections/exclusive">Exclusive Offers</a></li>
+        <li><a href="/collections/top-rated">Top Rated Gadgets</a></li>
+        <li><a href="/collections/new-arrivals">New Arrivals</a></li>
+        <li><a href="/collections">View All</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-column">
+      <h3>Our Policies</h3>
+      <ul>
+        <li><a href="/policies/terms-of-service">Terms of Service</a></li>
+        <li><a href="/policies/shipping-policy">Shipping Policy</a></li>
+        <li><a href="/policies/refund-policy">Refund Policy</a></li>
+        <li><a href="/policies/privacy-policy">Privacy Policy</a></li>
+        <li><a href="/pages/contact">Contact Information</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-column">
+      <h3>Get exclusive Offers and Updates</h3>
+      <p>Join our Newsletter for Exclusive Tech Deals, Appliance Care Tips & Early Access to Offers & Deals.</p>
+
+      <div class="newsletter-box">
+        <input type="email" placeholder="Your email">
+        <button>→</button>
+      </div>
+
+      <div class="footer-social" style="display: flex; gap: 15px;">
+  <!-- Facebook -->
+  <a href="https://facebook.com" target="_blank" class="social-icon">
+    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg" alt="Facebook">
+  </a>
+
+  <!-- X / Twitter -->
+  <a href="https://twitter.com" target="_blank" class="social-icon">
+    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/x.svg" alt="X / Twitter">
+  </a>
+
+  <!-- Instagram -->
+  <a href="https://instagram.com" target="_blank" class="social-icon">
+    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" alt="Instagram">
+  </a>
+
+  <!-- Pinterest -->
+  <a href="https://pinterest.com" target="_blank" class="social-icon">
+    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/pinterest.svg" alt="Pinterest">
+  </a>
+</div>
+
+<style>
+.social-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color:rgb(244, 244, 252); /* black background */
+  border-radius: 50%; /* circular */
+  transition: all 0.3s ease;
+}
+
+.social-icon img {
+  width: 20px;
+  height: 20px;
+}
+
+.social-icon:hover {
+  background-color:rgb(0, 26, 255); /* yellow hover */
+  transform: scale(1.1);
+}
+</style>
+
+    </div>
+
+  </div>
+</section>
+
+<style>
+.custom-footer {
+  background:rgb(66, 221, 27);
+  padding: 60px 20px;
+  color: #fff;
+}
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 40px;
+}
+.footer-column h3 {
+  font-size: 18px;
+  margin-bottom: 15px;
+  color: #fff;
+}
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.footer-column ul li {
+  margin-bottom: 8px;
+}
+.footer-column a {
+  color: #bbb;
+  text-decoration: none;
+}
+.footer-column a:hover {
+  color: #fff;
+}
+.footer-item {
+  margin-bottom: 20px;
+  display: flex;
+  gap: 10px;
+}
+.footer-icon {
+  font-size: 22px;
+}
+.newsletter-box {
+  display: flex;
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.newsletter-box input {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  outline: none;
+}
+.newsletter-box button {
+  width: 50px;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  background: #0d6efd;
+  color: #fff;
+}
+.social-icons {
+  margin-top: 15px;
+  display: flex;
+  gap: 15px;
+}
+.social-icons a {
+  color: #fff;
+  font-size: 22px;
+}
+@media(max-width: 900px) {
+  .footer-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media(max-width: 600px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
+
+{% schema %}
+{
+  "name": "Custom Modern Footer",
+  "settings": [],
+  "presets": [
+    {
+      "name": "Custom Modern Footer"
+    }
+  ]
+}
+{% endschema %}
