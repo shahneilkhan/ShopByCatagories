@@ -1,3 +1,78 @@
+<!-- sections/custom-menu.liquid -->
+<section class="custom-menu-section">
+  <div class="page-width">
+    {% if section.settings.headline != blank %}
+      <h2 class="custom-menu-headline">{{ section.settings.headline }}</h2>
+    {% endif %}
+    {% if section.settings.subtitle != blank %}
+      <p class="custom-menu-subtitle">{{ section.settings.subtitle }}</p>
+    {% endif %}
+
+    <ul class="custom-menu-links">
+      {% for block in section.blocks %}
+        <li>
+          <a href="{{ block.settings.url }}">
+            {% if block.settings.icon != blank %}
+              <img src="{{ block.settings.icon | img_url: '50x50' }}" alt="{{ block.settings.text }}" class="menu-icon">
+            {% endif %}
+            <span class="menu-text">{{ block.settings.text }}</span>
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+
+<style>
+.custom-menu-section {
+  padding: 20px 0;
+  text-align: center;
+}
+.custom-menu-headline {
+  font-size: 24px;
+  margin-bottom: 5px;
+}
+.custom-menu-subtitle {
+  font-size: 16px;
+  margin-bottom: 15px;
+  color: #555;
+}
+.custom-menu-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.custom-menu-links li {
+  display: flex;
+  align-items: center;
+}
+.custom-menu-links a {
+  text-decoration: none;
+  color: #000;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: transform 0.3s, color 0.3s;
+}
+.custom-menu-links a:hover {
+  color: #ff6600;
+  transform: translateY(-3px);
+}
+.menu-icon {
+  width: 24px;
+  height: 24px;
+  transition: transform 0.3s;
+}
+.custom-menu-links a:hover .menu-icon {
+  transform: scale(1.2);
+}
+</style>
+
 {% schema %}
 {
   "name": "Custom Menu",
