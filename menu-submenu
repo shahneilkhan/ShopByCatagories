@@ -1,0 +1,85 @@
+<section class="custom-menu-section">
+  <div class="page-width">
+    <!-- Headline & Subtitle -->
+    <div class="menu-header">
+      <h2>{{ section.settings.headline }}</h2>
+      <p>{{ section.settings.subtitle }}</p>
+    </div>
+
+    <!-- Menu List -->
+    <ul class="custom-menu-list">
+      {% for block in section.blocks %}
+        {% assign menu = linklists[block.settings.menu] %}
+        <li class="menu-item">
+          <a href="{{ menu.url | default: '#' }}">
+            {% if block.settings.icon %}
+              <img src="{{ block.settings.icon | img_url: '60x60' }}" alt="{{ block.settings.text }}">
+            {% endif %}
+            {{ block.settings.text }}
+          </a>
+
+          {% if menu.links.size > 0 %}
+            <ul class="submenu">
+              {% for link in menu.links %}
+                <li>
+                  <a href="{{ link.url }}">{{ link.title }}</a>
+                </li>
+              {% endfor %}
+            </ul>
+          {% endif %}
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Custom Menu",
+  "settings": [
+    {
+      "type": "text",
+      "id": "headline",
+      "label": "Headline",
+      "default": "Your Headline Here"
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "Subtitle",
+      "default": "Your subtitle here"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "menu_item",
+      "name": "Menu Item",
+      "settings": [
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Menu Text",
+          "default": "Menu Item"
+        },
+        {
+          "type": "link_list",
+          "id": "menu",
+          "label": "Select Shopify Menu"
+        },
+        {
+          "type": "image_picker",
+          "id": "icon",
+          "label": "Optional Icon/Image"
+        }
+      ]
+    }
+  ],
+  "max_blocks": 10,
+  "presets": [
+    {
+      "name": "Custom Menu",
+      "category": "Header"
+    }
+  ]
+}
+{% endschema %}
