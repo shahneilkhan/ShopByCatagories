@@ -1,0 +1,51 @@
+{% schema %}
+{
+  "name": "Custom Menu",
+  "settings": [
+    {
+      "type": "text",
+      "id": "headline",
+      "label": "Headline",
+      "default": "Your Headline Here"
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "Subtitle",
+      "default": "Your subtitle here"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "link",
+      "name": "Menu Link",
+      "settings": [
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Link Text",
+          "default": "Menu Item"
+        },
+        {
+          "type": "text",
+          "id": "url",
+          "label": "Link URL",
+          "default": "#"
+        },
+        {
+          "type": "image_picker",
+          "id": "icon",
+          "label": "Optional Icon/Image"
+        }
+      ]
+    }
+  ],
+  "max_blocks": 10,
+  "presets": [
+    {
+      "name": "Custom Menu",
+      "category": "Header"
+    }
+  ]
+}
+{% endschema %}
