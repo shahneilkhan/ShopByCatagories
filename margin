@@ -1,0 +1,29 @@
+<div class="newsletter-box">
+  <input type="email" placeholder="Your email">
+  <button>→</button>
+</div>
+
+.newsletter-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px; /* input ও button এর মধ্যে ফাঁক */
+  margin-bottom: 20px; /* নিচের social icons থেকে ফাঁক */
+}
+
+.newsletter-box input {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 250px;
+}
+
+.newsletter-box button {
+  padding: 10px 15px;
+  font-size: 18px;
+  background-color: #ff0; /* চাইলে কালার পরিবর্তন করতে পারো */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
